@@ -1,6 +1,9 @@
 -- Author: zHooP
 -- Date:   2019-11-30
 
+-- How much cells should be available
+local allocSize = 128
+
 local function alloc(tbl, size)
 	for i = 0, size do 
 		tbl[i] = 0
@@ -13,7 +16,7 @@ local function parse(bfCode)
 	local loopLevel = 0
 	local cells = {}
 	local curCell = 0
-	alloc(cells, 128) 
+	alloc(cells, allocSize) 
 	for i = 1, bfCode:len() do 
 		curChar = bfCode:sub(i, i)
 		if curChar == "+" then
@@ -56,4 +59,4 @@ local function parse(bfCode)
 	end
 end 
 
-parse("+++++[>++++++++++++++++++++++<-]>.")
+parse("brainfuck code here")
