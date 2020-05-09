@@ -1,7 +1,7 @@
 -- Author: zHooP
 -- Date:   2019-11-30
 
--- How much cells should be available
+-- How many cells should be available
 local allocSize = 128
 
 local function alloc(tbl, size)
